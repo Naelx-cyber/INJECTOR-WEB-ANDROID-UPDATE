@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Feature INJECTOR Free Fire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Mengatur font */
+            background-color: #ea0101; /* Warna latar belakang */
+            margin: 0; /* Menghilangkan margin default */
+            padding: 20px; /* Ruang di dalam body */
+        }
+
+        .container {
+            background-color: white; /* Warna latar belakang kontainer */
+            padding: 20px; /* Ruang di dalam kontainer */
+            border-radius: 5px; /* Sudut melengkung */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+            max-width: 600px; /* Lebar maksimum kontainer */
+            margin: auto; /* Memusatkan kontainer */
+        }
+
+        h1 {
+            text-align: center; /* Memusatkan teks judul */
+        }
+
+        nav ul {
+            list-style-type: none; /* Menghilangkan bullet pada list */
+            padding: 0; /* Menghilangkan padding default */
+        }
+
+        nav li {
+            margin: 15px 0; /* Jarak antara item list */
+            display: flex; /* Menggunakan flexbox untuk item list */
+            align-items: center; /* Memusatkan secara vertikal */
+        }
+
+        input[type="checkbox"] {
+            margin-left: 10px; /* Jarak antara label dan checkbox */
+        }
+
+        input[type="range"] {
+            margin-left: 10px; /* Jarak antara label dan range input */
+            width: 100%; /* Lebar penuh */
+        }
+
+        .status {
+            margin-left: 10px; /* Jarak antara checkbox dan status */
+            font-weight: bold; /* Menebalkan teks status */
+            color: green; /* Warna teks status */
+        }
+
+        .star-message {
+            margin-top: 20px; /* Jarak atas untuk pesan */
+            font-weight: bold; /* Menebalkan teks */
+            color: blue; /* Warna teks */
+            cursor: pointer; /* Menunjukkan bahwa ini adalah elemen yang dapat diklik */
+        }
+
+        .active-status {
+            margin-left: 10px; /* Jarak antara pesan dan status */
+            font-weight: bold; /* Menebalkan teks status */
+            color: green; /* Warna teks status */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Selamat Datang Di Halaman Feature INJECTOR Free Fire</h1>
+        <nav>
+            <ul>
+                <li>Aim FOV<input type="checkbox" id="aim-fov"><span class="status" id="status-aim-fov"></span></li>
+                <li>Aim Bot 85%<input type="checkbox" id="aim-bot"><span class="status" id="status-aim-bot"></span></li>
+                <li>Aim Accuracy<input type="checkbox" id="aim-accuracy"><span class="status" id="status-aim-accuracy"></span></li>
+                <li>Aim Lock<input type="checkbox" id="aim-lock"><span class="status" id="status-aim-lock"></span></li>
+                <li>Sensitivity<input type="range" min="0" max="100" value="50" id="sensitivity"></li>
+            </ul>
+        </nav>
+        <div class="star-message" id="star-message">Star to file Free Fire</div> <!-- Pesan tambahan -->
+        <span class="active-status" id="active-status"></span> <!-- Status aktif -->
+    </div>
+
+    <script>
+        // Variabel untuk menyimpan status aktif
+        let isStarActive = false;
+
+        // Fungsi untuk mengupdate status checkbox
+        function updateStatus(checkboxId, statusId) {
+            const checkbox = document.getElementById(checkboxId);
+            const status = document.getElementById(statusId);
+            status.textContent = checkbox.checked ? 'Active' : ''; // Menampilkan 'Aktif' jika dicentang
+            updateStarMessage(); // Memperbarui pesan "Star to file Free Fire"
+        }
+
+        // Fungsi untuk memperbarui tampilan pesan
+        function updateStarMessage() {
+            const checkboxes = [
+                document.getElementById('aim-fov'),
+                document.getElementById('aim-bot'),
+                document.getElementById('aim-accuracy'),
+                document.getElementById('aim-lock')
+            ];
+            const starMessage = document.getElementById('star-message');
+            // Cek apakah ada checkbox yang dicentang
+            const anyChecked = checkboxes.some(checkbox => checkbox.checked);
+            starMessage.style.display = anyChecked ? 'block' : 'none'; // Tampilkan atau sembunyikan pesan
+        }
+
+        // Menambahkan event listener untuk Aim FOV
+        document.getElementById('aim-fov').addEventListener('change', function() {
+            updateStatus('aim-fov', 'status-aim-fov');
+            // Logika untuk Aim FOV
+            if (this.checked) {
+                console.log("Aim FOV diaktifkan");
+                // Tambahkan kode untuk mengaktifkan Aim FOV
+            } else {
+                console.log("Aim FOV dinonaktifkan");
+                // Tambahkan kode untuk menonaktifkan Aim FOV
+            }
+        });
+
+        // Menambahkan event listener untuk Aim Bot
+        document.getElementById('aim-bot').addEventListener('change', function() {
+            updateStatus('aim-bot', 'status-aim-bot');
+            // Logika untuk Aim Bot
+            if (this.checked) {
+                console.log("Aim Bot diaktifkan");
+                // Tambahkan kode untuk mengaktifkan Aim Bot
+            } else {
+                console.log("Aim Bot dinonaktifkan");
+                // Tambahkan kode untuk menonaktifkan Aim Bot
+            }
+        });
+
+        // Menambahkan event listener untuk Aim Accuracy
+        document.getElementById('aim-accuracy').addEventListener('change', function() {
+            updateStatus('aim-accuracy', 'status-aim-accuracy');
+            // Logika untuk Aim Accuracy
+            if (this.checked) {
+                console.log("Aim Accuracy diaktifkan");
+                // Tambahkan kode untuk mengaktifkan Aim Accuracy
+            } else {
+                console.log("Aim Accuracy dinonaktifkan");
+                // Tambahkan kode untuk menonaktifkan Aim Accuracy
+            }
+        });
+
+        // Menambahkan event listener untuk Aim Lock
+        document.getElementById('aim-lock').addEventListener('change', function() {
+            updateStatus('aim-lock', 'status-aim-lock');
+            // Logika untuk Aim Lock
+            if (this.checked) {
+                console.log("Aim Lock diaktifkan");
+                // Tambahkan kode untuk mengaktifkan Aim Lock
+            } else {
+                console.log("Aim Lock dinonaktifkan");
+                // Tambahkan kode untuk menonaktifkan Aim Lock
+            }
+        });
+
+        // Menambahkan event listener untuk Star to file Free Fire
+        document.getElementById('star-message').addEventListener('click', function() {
+            const activeStatus = document.getElementById('active-status');
+            // Toggle status aktif
+            isStarActive = !isStarActive;
+            activeStatus.textContent = isStarActive ? 'Active' : 'Non Active'; // Menampilkan status aktif atau non aktif
+            console.log(isStarActive ? "Star to file Free Fire diaktifkan" : "Star to file Free Fire dinonaktifkan");
+        });
+    </script>
+</body>
+
+</html>

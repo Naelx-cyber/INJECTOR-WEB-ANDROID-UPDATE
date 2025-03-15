@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Memusatkan secara horizontal */
+            align-items: flex-start; /* Memusatkan secara vertikal ke atas */
+            height: 100vh; /* Mengatur tinggi viewport */
+            margin: 0; /* Menghilangkan margin default */
+            background-color: #f0f0f0; /* Warna latar belakang */
+        }
+
+        .container {
+            background-color: white; /* Warna latar belakang kotak login */
+            padding: 20px; /* Ruang di dalam kotak */
+            border-radius: 5px; /* Sudut melengkung */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+            width: 300px; /* Lebar kotak login */
+            margin-top: 50px; /* Jarak dari atas */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%; /* Lebar penuh */
+            padding: 10px; /* Ruang di dalam input */
+            margin: 10px 0; /* Margin atas dan bawah */
+            border: 1px solid #ccc; /* Garis batas */
+            border-radius: 5px; /* Sudut melengkung */
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px; /* Jarak antara checkbox dan label */
+        }
+
+        button {
+            width: 100%; /* Lebar penuh */
+            padding: 10px; /* Ruang di dalam tombol */
+            background-color: #007bff; /* Warna latar belakang tombol */
+            color: white; /* Warna teks tombol */
+            border: none; /* Menghilangkan garis batas */
+            border-radius: 5px; /* Sudut melengkung */
+            cursor: pointer; /* Menunjukkan bahwa ini adalah tombol */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Warna latar belakang saat hover */
+        }
+
+        .checkbox-label {
+            display: flex; /* Menggunakan flexbox untuk label checkbox */
+            align-items: center; /* Memusatkan secara vertikal */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="User  " required>
+        <input type="password" id="password" placeholder="Password" required>
+        <div class="checkbox-label">
+            <input type="checkbox" id="setuju">
+            <label for="setuju">Setuju dengan syarat dan ketentuan</label>
+        </div>
+        <button onclick="login()">Masuk</button>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Cek username dan password
+            if (username === 'NaelXiter' && password === 'NaelXiter19') {
+                // Jika login berhasil, arahkan ke halaman index.html
+                window.location.href = 'index.html'; // Arahkan ke halaman index.html
+            } else {
+                alert('Username atau password salah!');
+            }
+        }
+    </script>
+</body>
+
+</html>
